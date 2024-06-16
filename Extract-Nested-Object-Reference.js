@@ -32,3 +32,16 @@ Object.prototype.hash = function(string) {
 }
 
 // or
+
+Object.prototype.hash = function(string) {
+  let obj = this;
+  string.split(".").forEach(function(el) { 
+    try {
+      obj = obj[el];
+    }
+    catch(e) { 
+      obj = undefined;
+    }
+  });
+  return obj;
+}
