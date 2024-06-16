@@ -23,3 +23,10 @@ obj.hash('person.animal.pet.needNoseAntEater'); // undefined
 
 
 // Solution
+
+Object.prototype.hash = function(string) {
+  let arr = string.split('.');
+  return arr.reduce(function(pv, cv){
+    return (pv) ? pv[cv] : pv;
+  }, this);
+}
