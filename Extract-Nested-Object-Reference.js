@@ -30,3 +30,5 @@ Object.prototype.hash = function(string) {
     return (pv) ? pv[cv] : pv;
   }, this);
 }
+
+// or
